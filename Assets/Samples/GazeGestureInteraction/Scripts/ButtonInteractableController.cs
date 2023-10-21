@@ -9,11 +9,13 @@ namespace HoloInteractive.XR.HoloKit.Samples.GazeGestureInteraction
 {
     public class ButtonInteractableController : MonoBehaviour, IGazeGestureInteractable
     {
+        // Hover starts
         public void OnSelectionEntered()
         {
 
         }
 
+        // Hover ends
         public void OnSelectionExited()
         {
 
@@ -24,6 +26,7 @@ namespace HoloInteractive.XR.HoloKit.Samples.GazeGestureInteraction
 
         }
 
+        // Pinched
         public void OnGestureSelected()
         {
 
