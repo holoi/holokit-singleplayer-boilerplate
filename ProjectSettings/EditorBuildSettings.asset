@@ -26,10 +26,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Samples/HeadInteraction/Scenes/HeadInteraction.unity
     guid: d6ee9d8b9c0c0484e961c9e27d508a15
-  - enabled: 0
+  - enabled: 1
     path: Assets/Samples/GazeInteraction/Scenes/GazeInteraction.unity
     guid: 21955f43439584c7aa9ec985e3414ea5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Samples/GlowingOrbs/Scenes/GlowingOrbs.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
