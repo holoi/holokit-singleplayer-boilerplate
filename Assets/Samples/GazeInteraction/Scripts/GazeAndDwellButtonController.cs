@@ -14,6 +14,13 @@ namespace HoloInteractive.XR.HoloKit.Samples.GazeInteraction
 
         [SerializeField] private float m_MaxLoad = 1f;
 
+        [SerializeField] Image[] m_PageDot = new Image[3];
+
+        private Color m_DotColorInactive = new Color(.5f, .5f, .5f);
+        private Color m_DotColorActive = new Color(1, 1, 1);
+
+        private int currentAvtiveDot = 0;
+
         private bool isSelected = false;
 
         private float load = 0;
@@ -41,6 +48,10 @@ namespace HoloInteractive.XR.HoloKit.Samples.GazeInteraction
                 {
                     load = 0;
                     UpdatePercentageState();
+
+                    currentAvtiveDot++;
+                    if (currentAvtiveDot > 2) currentAvtiveDot = 0;
+                    UpdatePageDots();
                 }
             }
         }
@@ -49,6 +60,25 @@ namespace HoloInteractive.XR.HoloKit.Samples.GazeInteraction
         {
             percentageLoad = load / m_MaxLoad;
             m_ActiveBG.localScale = new Vector3(percentageLoad, 1,1);
+        }
+
+        private void UpdatePageDots()
+        {
+
+            for (int i = 0; i < m_PageDot.Length; i++)
+            {
+                if(i == currentAvtiveDot)
+                {
+                    m_PageDot[i].color = m_DotColorActive;
+                    Debug.Log("set" + i + "to active color");
+                }
+                else
+                {
+                    m_PageDot[i].color = m_DotColorInactive;
+                }
+
+                
+            }
         }
 
         public void OnSelectionEntered()
