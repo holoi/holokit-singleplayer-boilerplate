@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 39536455}
   - component: {fileID: 39536454}
   m_Layer: 0
-  m_Name: GestureManager
+  m_Name: Orb Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,11 +153,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HandGestureRecognitionManager: {fileID: 1668825292}
-  m_HandSampleJoint: {fileID: 976761573}
-  m_EyeCenter: {fileID: 916815723}
-  m_FireBall: {fileID: 7304326241562420188, guid: 2c682907da94d4da69c48fa54cfb6c0c,
-    type: 3}
-  speed: 0
+  m_SpawnHandJoint: {fileID: 233855123}
+  m_OrbPrefab: {fileID: 7304326241562420188, guid: 2c682907da94d4da69c48fa54cfb6c0c, type: 3}
+  m_DistOffset: 0.3
+  m_InitialForce: 5
+  m_Lifetime: 6
 --- !u!4 &39536455
 Transform:
   m_ObjectHideFlags: 0
@@ -1984,7 +1984,7 @@ GameObject:
   - component: {fileID: 662517373}
   - component: {fileID: 662517372}
   - component: {fileID: 662517371}
-  - component: {fileID: 662517370}
+  - component: {fileID: 662517378}
   m_Layer: 0
   m_Name: HoloKit Camera
   m_TagString: MainCamera
@@ -2008,50 +2008,6 @@ Transform:
   - {fileID: 916815723}
   m_Father: {fileID: 364766761}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &662517370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 662517368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_AllowHDROutput: 1
-  m_UseScreenCoordOverride: 0
-  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2
-  m_TaaSettings:
-    quality: 3
-    frameInfluence: 0.1
-    jitterScale: 1
-    mipBias: 0
-    varianceClampScale: 0.9
-    contrastAdaptiveSharpening: 0
 --- !u!114 &662517371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2073,10 +2029,8 @@ MonoBehaviour:
   m_FarClipPlane: 50
   m_ShowAlignmentMarkerInStereoMode: 1
   m_HoloKitGeneration: 0
-  m_iOSPhoneModelList: {fileID: 11400000, guid: 97e080f80a8ae49d78e255ae53b17e11,
-    type: 2}
-  m_DefaultAndroidPhoneModelList: {fileID: 11400000, guid: f192a44dbc7c041758df0ca7a4e8befe,
-    type: 2}
+  m_iOSPhoneModelList: {fileID: 11400000, guid: 97e080f80a8ae49d78e255ae53b17e11, type: 2}
+  m_DefaultAndroidPhoneModelList: {fileID: 11400000, guid: f192a44dbc7c041758df0ca7a4e8befe, type: 2}
   m_CustomAndroidPhoneModelList: {fileID: 0}
 --- !u!114 &662517372
 MonoBehaviour:
@@ -2283,6 +2237,23 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &662517378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662517368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b15f82cc229284894964d2d30806969d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HumanSegmentationStencilMode: 0
+  m_HumanSegmentationDepthMode: 0
+  m_EnvironmentDepthMode: 1
+  m_EnvironmentDepthTemporalSmoothing: 1
+  m_OcclusionPreferenceMode: 0
 --- !u!1 &756121726
 GameObject:
   m_ObjectHideFlags: 0
