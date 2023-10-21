@@ -8,8 +8,6 @@ namespace HoloInteractive.XR.HoloKit.Samples.HeadInteraction
     {
         [SerializeField]
         Transform m_CatNeck;
-        [SerializeField]
-        Transform m_CatNeckWithOffset;
 
         Transform head;
         // Start is called before the first frame update
@@ -20,9 +18,9 @@ namespace HoloInteractive.XR.HoloKit.Samples.HeadInteraction
 
         private void LateUpdate()
         {
-            m_CatNeckWithOffset.LookAt(head);
+            m_CatNeck.LookAt(head);
 
-            m_CatNeck.eulerAngles = m_CatNeckWithOffset.rotation.eulerAngles + new Vector3(60f,0,0);
+            m_CatNeck.eulerAngles += new Vector3(60f,0,0);
         }
     }
 }

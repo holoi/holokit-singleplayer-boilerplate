@@ -372,6 +372,38 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &504492934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 504492935}
+  m_Layer: 0
+  m_Name: Cat with ground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &504492935
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504492934}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1294227046}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &508588364
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,37 +645,6 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
---- !u!1 &760206887
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 760206888}
-  m_Layer: 0
-  m_Name: neck with offset
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &760206888
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 760206887}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1294227044}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &825503854
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,7 +784,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 504492935}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c4837b295fb564dfea650d0d7a04deea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -795,7 +796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4837b295fb564dfea650d0d7a04deea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.53
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4837b295fb564dfea650d0d7a04deea, type: 3}
       propertyPath: m_LocalRotation.w
@@ -803,15 +804,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4837b295fb564dfea650d0d7a04deea, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4837b295fb564dfea650d0d7a04deea, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4837b295fb564dfea650d0d7a04deea, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c4837b295fb564dfea650d0d7a04deea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -859,10 +860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 6519398363357879938, guid: c4837b295fb564dfea650d0d7a04deea, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 760206888}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c4837b295fb564dfea650d0d7a04deea, type: 3}
       insertIndex: -1
@@ -894,10 +892,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CatNeck: {fileID: 1294227042}
-  m_CatNeckWithOffset: {fileID: 760206888}
---- !u!4 &1294227044 stripped
+--- !u!4 &1294227046 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 6519398363357879938, guid: c4837b295fb564dfea650d0d7a04deea, type: 3}
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c4837b295fb564dfea650d0d7a04deea, type: 3}
   m_PrefabInstance: {fileID: 1294227040}
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &1294227047
@@ -1500,4 +1497,4 @@ SceneRoots:
   - {fileID: 1969263613}
   - {fileID: 740267026}
   - {fileID: 1539976925}
-  - {fileID: 1294227040}
+  - {fileID: 504492935}
