@@ -1,0 +1,3 @@
+[submodule "Packages/com.holoi.xr.holokit"]
+	path = Packages/com.holoi.xr.holokit
+	url = https://github.com/holoi/holokit-unity-sdk
