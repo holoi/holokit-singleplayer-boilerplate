@@ -5,7 +5,6 @@ namespace HoloInteractive.XR.HoloKit.Samples.GlowingOrbs
 {
     public class OrbSpawner : MonoBehaviour
     {
-
         [SerializeField] private HandGestureRecognitionManager m_HandGestureRecognitionManager;
 
         [SerializeField] private Transform m_SpawnHandJoint;
