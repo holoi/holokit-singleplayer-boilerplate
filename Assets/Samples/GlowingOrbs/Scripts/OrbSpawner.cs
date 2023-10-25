@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: Copyright 2023 Holo Interactive <dev@holoi.com>
+// SPDX-FileContributor: Sizheng Hao <sizheng@holoi.com>
+// SPDX-License-Identifier: MIT
+
+#if UNITY_IOS
 using UnityEngine;
 using HoloInteractive.XR.HoloKit.iOS;
 
@@ -42,3 +47,4 @@ namespace HoloInteractive.XR.HoloKit.Samples.GlowingOrbs
         }
     }
 }
+#endif
