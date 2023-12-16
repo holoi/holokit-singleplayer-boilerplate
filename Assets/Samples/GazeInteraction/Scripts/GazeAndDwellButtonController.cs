@@ -1,10 +1,9 @@
 // SPDX-FileCopyrightText: Copyright 2023 Holo Interactive <dev@holoi.com>
-// SPDX-FileContributor: Yuchen Zhang <yuchen@holoi.com>
+// SPDX-FileContributor: Sizheng Hao <sizheng@holoi.com>
 // SPDX-License-Identifier: MIT
 
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 namespace HoloInteractive.XR.HoloKit.Samples.GazeInteraction
 {
@@ -16,16 +15,16 @@ namespace HoloInteractive.XR.HoloKit.Samples.GazeInteraction
 
         [SerializeField] Image[] m_PageDot = new Image[3];
 
-        private Color m_DotColorInactive = new Color(.5f, .5f, .5f);
-        private Color m_DotColorActive = new Color(1, 1, 1);
+        private Color m_DotColorInactive = new(.5f, .5f, .5f);
+        private Color m_DotColorActive = new(1f, 1f, 1f);
 
-        private int currentAvtiveDot = 0;
+        private int m_CurrentAvtiveDot = 0;
 
-        private bool isSelected = false;
+        private bool m_IsSelected = false;
 
-        private float load = 0;
+        private float m_Load = 0;
 
-        private float percentageLoad = 0;
+        private float m_PercentageLoad = 0;
 
         private void Start()
         {
@@ -34,23 +33,23 @@ namespace HoloInteractive.XR.HoloKit.Samples.GazeInteraction
 
         private void Update()
         {
-            if (!isSelected && load > 0f)
+            if (!m_IsSelected && m_Load > 0f)
             {
-                load -= Time.fixedTime;
-                if (load < 0f)
-                    load = 0f;
+                m_Load -= Time.fixedTime;
+                if (m_Load < 0f)
+                    m_Load = 0f;
                 UpdatePercentageState();
             }
 
-            if(isSelected)
+            if(m_IsSelected)
             {
-                if (percentageLoad == 1)
+                if (m_PercentageLoad == 1)
                 {
-                    load = 0;
+                    m_Load = 0;
                     UpdatePercentageState();
 
-                    currentAvtiveDot++;
-                    if (currentAvtiveDot > 2) currentAvtiveDot = 0;
+                    m_CurrentAvtiveDot++;
+                    if (m_CurrentAvtiveDot > 2) m_CurrentAvtiveDot = 0;
                     UpdatePageDots();
                 }
             }
@@ -58,8 +57,8 @@ namespace HoloInteractive.XR.HoloKit.Samples.GazeInteraction
 
         private void UpdatePercentageState()
         {
-            percentageLoad = load / m_MaxLoad;
-            m_ActiveBG.localScale = new Vector3(percentageLoad, 1,1);
+            m_PercentageLoad = m_Load / m_MaxLoad;
+            m_ActiveBG.localScale = new Vector3(m_PercentageLoad, 1,1);
         }
 
         private void UpdatePageDots()
@@ -67,7 +66,7 @@ namespace HoloInteractive.XR.HoloKit.Samples.GazeInteraction
 
             for (int i = 0; i < m_PageDot.Length; i++)
             {
-                if(i == currentAvtiveDot)
+                if(i == m_CurrentAvtiveDot)
                 {
                     m_PageDot[i].color = m_DotColorActive;
                     Debug.Log("set" + i + "to active color");
@@ -76,27 +75,25 @@ namespace HoloInteractive.XR.HoloKit.Samples.GazeInteraction
                 {
                     m_PageDot[i].color = m_DotColorInactive;
                 }
-
-                
             }
         }
 
         public void OnSelectionEntered()
         {
-            isSelected = true;
+            m_IsSelected = true;
         }
 
         public void OnSelectionExited()
         {
-            isSelected = false;
+            m_IsSelected = false;
         }
 
         public void OnSelected(float deltaTime)
         {
-            load += deltaTime;
-            if (load > m_MaxLoad)
+            m_Load += deltaTime;
+            if (m_Load > m_MaxLoad)
             {
-                load = m_MaxLoad;
+                m_Load = m_MaxLoad;
             }
             UpdatePercentageState();
         }
