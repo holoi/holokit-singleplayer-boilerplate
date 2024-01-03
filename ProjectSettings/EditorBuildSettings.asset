@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Samples/StereoscopicRendering/Scenes/StereoscopicRendering.unity
     guid: 9034993a8ad8343989ffd04d6bf84577
   - enabled: 0
@@ -38,6 +38,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Samples/AppleNativeProviderTest/Scenes/AppleNativeProviderTest.unity
     guid: a0fc5169e13774c1fb535496288c3308
+  - enabled: 1
+    path: Assets/Samples/ResetWorldOrigin/Scenes/ResetWorldOrigin.unity
+    guid: 9d3424e97f0844172a316018aacd8ee2
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 1b431d38ea9474b7c9853b7d90b6526f, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: d8d411e0796f6496c891893f0399675a, type: 2}

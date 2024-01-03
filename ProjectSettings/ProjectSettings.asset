@@ -579,8 +579,7 @@ PlayerSettings:
   enableCrashReportAPI: 0
   cameraUsageDescription: For AR
   locationUsageDescription: 
-  microphoneUsageDescription: To record audio with your videos, we need access to
-    your microphone.
+  microphoneUsageDescription: For audio recording
   bluetoothUsageDescription: 
   macOSTargetOSVersion: 10.13.0
   switchNMETAOverride: 
