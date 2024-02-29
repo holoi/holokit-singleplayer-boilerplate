@@ -1,8 +1,8 @@
 using UnityEngine;
-using HoloInteractive.XR.HoloKit.iOS;
+using HoloKit.iOS;
 using TMPro;
 
-namespace HoloInteractive.XR.HoloKit.Samples.AppleNativeProviderTest
+namespace HoloKit.Samples.AppleNativeProviderTest
 {
     public class AppleNativeManager : MonoBehaviour
     {

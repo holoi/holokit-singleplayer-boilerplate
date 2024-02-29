@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace HoloInteractive.XR.HoloKit.Samples.HeadInteraction
+namespace HoloKit.Samples.HeadInteraction
 {
     public class CatController : MonoBehaviour
     {

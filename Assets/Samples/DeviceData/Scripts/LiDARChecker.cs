@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using HoloInteractive.XR.HoloKit.iOS;
+using HoloKit.iOS;
 
 public class LiDARChecker : MonoBehaviour
 {
