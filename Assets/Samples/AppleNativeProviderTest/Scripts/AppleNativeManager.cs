@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: Copyright 2025 Reality Design Lab <dev@reality.design>
+// SPDX-FileContributor: Yuchen Zhang <yuchenz27@outlook.com>
+// SPDX-License-Identifier: MIT
+
 using UnityEngine;
 using HoloKit.iOS;
 using TMPro;

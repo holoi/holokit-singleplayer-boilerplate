@@ -2495,6 +2495,7 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+  m_ScrollDeltaPerTick: 6
 --- !u!1 &764041061
 GameObject:
   m_ObjectHideFlags: 0
@@ -3931,8 +3932,8 @@ MonoBehaviour:
   m_Camera: {fileID: 1797785124}
   m_OriginBaseGameObject: {fileID: 1467655465}
   m_CameraFloorOffsetObject: {fileID: 311677293}
-  m_RequestedTrackingOriginMode: 0
-  m_CameraYOffset: 1.1176
+  m_RequestedTrackingOriginMode: 2
+  m_CameraYOffset: 0
 --- !u!4 &1467655467
 Transform:
   m_ObjectHideFlags: 0
@@ -5015,7 +5016,15 @@ MonoBehaviour:
       m_Id: f5a49170-7be3-4859-b42d-83f7c8b8a73c
       m_Processors: 
       m_Interactions: 
-      m_SingletonActionBindings: []
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: bdd1c535-09c8-44cb-9454-ee0a66fd2cbb
+        m_Path: 
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Tracking State
+        m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_PositionAction:

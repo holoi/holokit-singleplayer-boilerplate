@@ -46,6 +46,7 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
+mono_crash.*.json
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -75,3 +76,5 @@ crashlytics-build.properties
 
 .DS_Store
 /Build_Android
+.vscode
+.idea
